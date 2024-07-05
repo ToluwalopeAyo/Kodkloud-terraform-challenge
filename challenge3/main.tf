@@ -10,7 +10,7 @@ resource "aws_instance" "citadel" {
   key_name = aws_key_pair.citadel-key.key_name
 }
 
-resource "aws_eip" "citadel_eip" {
+resource "aws_eip" "eip" {
   vpc = true
   instance = aws_instance.citadel.id
   provisioner "local-exec" {
